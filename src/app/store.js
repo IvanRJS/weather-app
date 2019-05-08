@@ -3,20 +3,16 @@ export class Store{
     constructor(){
         this.city;
         this.countryCode;
-        this.defaultCity='kiev';
-        this.defaultCountry='ua';
+        this.defaultCity='tokyo';
+        this.defaultCountry='jp';
     }
     setLocationData(city,countryCode){
-
         localStorage.setItem('city',city);
         localStorage.setItem('countryCode',countryCode);
-
     }
 
     getLocationData(){
-
         if(localStorage.getItem('city')===null){
-
             this.city=this.defaultCity;
         }
         else{
